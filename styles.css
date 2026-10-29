@@ -113,7 +113,7 @@ a{color:inherit;text-decoration:none}
 .screening-icon{width:42px;height:42px;fill:none;stroke:var(--gold-dark);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
 .panel-note{font-size:10px;color:var(--muted);line-height:1.7;margin-top:19px}
 .corporate{background:var(--white)}
-.corporate-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:88px;align-items:center}
+.corporate-grid{display:grid;grid-template-columns:1fr;gap:0;align-items:center}.corporate-copy{max-width:820px;margin-inline:auto}
 .corporate-image{height:520px;position:relative;background:var(--cream-deep)}
 .corporate-image img{width:100%;height:100%;object-fit:cover;object-position:center;filter:saturate(.65)}
 .image-caption{position:absolute;left:0;bottom:0;background:var(--cream);padding:14px 19px;font-size:9px;letter-spacing:.12em;font-weight:700;color:var(--gold-dark)}
@@ -131,7 +131,7 @@ a{color:inherit;text-decoration:none}
 .contact h2{font-size:clamp(40px,5.5vw,68px);max-width:740px}
 .contact h2 em{color:var(--gold)}
 .contact-intro{color:rgba(251,248,234,.63);margin:18px 0 31px}
-.contact-actions{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.contact-actions{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
 .contact-card{position:relative;display:flex;flex-direction:column;align-items:flex-start;border:1px solid rgba(251,248,234,.21);padding:23px 24px;min-height:150px;transition:background .2s,border-color .2s}
 .contact-card:hover{background:rgba(251,248,234,.08);border-color:var(--gold)}
 .contact-icon{color:var(--gold);font-size:18px;margin-bottom:13px;height:24px}
@@ -143,7 +143,7 @@ a{color:inherit;text-decoration:none}
 .social-row a{color:var(--gold)}
 .instagram-link{display:inline-flex;align-items:center;gap:8px}
 .instagram-link svg{width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
-.social-pending{font-size:9px;letter-spacing:0}
+.data-note{max-width:760px;margin:18px 0 0;color:rgba(251,248,234,.62);font-size:10px;line-height:1.7}
 .site-footer{background:#1c1b18;color:var(--cream)}
 .footer-top{padding:26px 0;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(251,248,234,.15)}
 .footer-brand{display:flex;align-items:center;gap:10px}
@@ -317,14 +317,32 @@ a{color:inherit;text-decoration:none}
 .booking-copy .button{gap:12px}
 .booking-copy .button svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
 .booking-privacy{display:block;max-width:490px;margin-top:14px;font-size:10px;line-height:1.65;color:var(--muted)}
+.booking-process{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:25px 0 24px;padding:0;list-style:none;max-width:620px}
+.booking-process li{display:flex;align-items:flex-start;gap:9px}
+.booking-process li>span{font-size:10px;font-weight:700;letter-spacing:.08em;color:var(--gold-dark);padding-top:2px}
+.booking-process strong,.booking-process small{display:block}
+.booking-process strong{font-size:11px;line-height:1.35}
+.booking-process small{font-size:9px;line-height:1.5;color:var(--muted);margin-top:3px}
+.emergency-note{max-width:490px;margin:15px 0 0;padding-left:11px;border-left:2px solid var(--gold-dark);font-size:10px;line-height:1.65;color:var(--muted)}
+.emergency-note strong{color:var(--ink)}
+.faq{background:var(--white)}
+.faq-inner{max-width:900px}
+.faq h2{font-size:clamp(38px,5vw,60px);margin-bottom:26px}
+.faq-list{border-top:1px solid var(--line)}
+.faq-list details{border-bottom:1px solid var(--line);padding:17px 0}
+.faq-list summary{cursor:pointer;font-size:14px;font-weight:600;list-style:none;position:relative;padding-right:30px}
+.faq-list summary::-webkit-details-marker{display:none}
+.faq-list summary::after{content:'+';position:absolute;right:2px;top:-4px;font-size:22px;color:var(--gold-dark)}
+.faq-list details[open] summary::after{content:'−'}
+.faq-list details p{max-width:720px;margin:12px 0 0;color:var(--muted);font-size:13px;line-height:1.7}
 .booking-panel{background:var(--white);padding:28px 30px}
 .booking-panel h3{font-family:var(--serif);font-size:24px;font-weight:500;margin:0 0 14px}
 .booking-panel>div{padding:13px 0;border-bottom:1px solid var(--line)}
 .booking-panel>div p{font-size:12px;font-weight:600;margin:0}
 .booking-panel>div small{font-size:10px;font-weight:400;color:var(--muted)}
 .booking-note{font-size:10px;color:var(--muted);line-height:1.65;margin:16px 0 0}
-@media(max-width:900px){.booking-grid{gap:40px;grid-template-columns:minmax(0,1.05fr) minmax(270px,.85fr)}.portrait-trigger{height:610px}}
-@media(max-width:700px){.booking-grid{grid-template-columns:1fr;gap:27px}.booking-copy h2{font-size:clamp(39px,10.5vw,54px)}.booking-copy>p:not(.eyebrow){font-size:13px}.booking-panel{padding:23px 20px}.portrait-trigger{height:570px}.portrait-view{left:10px;bottom:10px;padding:9px 11px}}
+@media(max-width:900px){.contact-actions{grid-template-columns:repeat(2,minmax(0,1fr))}.booking-grid{gap:40px;grid-template-columns:minmax(0,1.05fr) minmax(270px,.85fr)}.portrait-trigger{height:610px}}
+@media(max-width:700px){.contact-actions{grid-template-columns:1fr}.booking-process{grid-template-columns:1fr;gap:10px;margin:20px 0}.booking-process li{align-items:baseline}.booking-grid{grid-template-columns:1fr;gap:27px}.booking-copy h2{font-size:clamp(39px,10.5vw,54px)}.booking-copy>p:not(.eyebrow){font-size:13px}.booking-panel{padding:23px 20px}.portrait-trigger{height:570px}.portrait-view{left:10px;bottom:10px;padding:9px 11px}}
 
 /* Keep the full navigation readable on small laptops and tablets. */
 @media(min-width:701px) and (max-width:860px){
