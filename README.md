@@ -1,6 +1,6 @@
 # AOlera Concierge Medical Services website
 
-Responsive, lightweight static site built from the supplied AOlera brand and service artwork. The hero uses a seated portrait from Dr Majid’s public Instagram post; the founder section keeps the close-cropped suit portrait. The corporate-health section is text-led until AOlera provides original workplace photography. Service and screening sections use medical line icons.
+Responsive, lightweight static site built from the supplied AOlera brand and service artwork. The hero uses a medical-attire portrait from the first post on Dr Majid’s public Instagram post; the founder section keeps the close-cropped suit portrait. The corporate-health section is text-led until AOlera provides original workplace photography. Service and screening sections use medical line icons.
 
 The page includes Open Graph and large-image Twitter card metadata with a 1200 × 630 branded preview. These point to the live GitHub Pages URL; update the canonical URL, `og:url`, `og:image`, and `twitter:image` if AOlera later uses a custom domain. Social platforms need a public HTTPS site to fetch and cache the preview.
 
@@ -18,3 +18,5 @@ Please have AOlera review and approve the founder biography, credentials, servic
 - `styles.css` — responsive visual design
 - `script.js` — mobile navigation and current year
 - `assets/` — compressed image crops from the supplied brand artwork
+
+
